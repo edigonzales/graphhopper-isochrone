@@ -106,6 +106,7 @@ public class App {
         
         
         Geometry convexHull = mp.convexHull();
+        convexHull.setSRID(2056);
         BufferedWriter writer3 = new BufferedWriter(new FileWriter("/Users/stefan/Downloads/erreichbarkeit_convex.json"));
         gjw.write(convexHull, writer3);
 
