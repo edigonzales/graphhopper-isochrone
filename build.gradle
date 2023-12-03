@@ -1,0 +1,41 @@
+plugins {
+    id 'application'
+}
+
+/*
+sourceCompatibility = '11'
+targetCompatibility = '11'
+
+compileJava {
+    options.compilerArgs.addAll(['--release', '11'])
+}
+*/
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testImplementation 'org.junit.jupiter:junit-jupiter:5.9.1'
+
+    implementation 'com.google.guava:guava:31.1-jre'
+    implementation 'com.graphhopper:graphhopper-core:8.0'
+    
+    implementation 'org.locationtech.jts:jts-core:1.19.0'
+    implementation 'org.locationtech.jts:jts-io:1.19.0'
+    implementation 'org.locationtech.jts.io:jts-io-common:1.19.0'
+
+    
+    
+    implementation 'org.slf4j:slf4j-api:1.7.36'
+    implementation 'org.slf4j:slf4j-simple:1.7.36'
+    
+}
+
+application {
+    mainClass = 'ch.so.agi.isochrone.App'
+}
+
+tasks.named('test') {
+    useJUnitPlatform()
+}
