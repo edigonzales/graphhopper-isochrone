@@ -104,6 +104,12 @@ public class App {
         BufferedWriter writer2 = new BufferedWriter(new FileWriter("/Users/stefan/Downloads/erreichbarkeit_polygon7.json"));
         gjw.write(g, writer2);
         
+        
+        Geometry convexHull = mp.convexHull();
+        BufferedWriter writer3 = new BufferedWriter(new FileWriter("/Users/stefan/Downloads/erreichbarkeit_convex.json"));
+        gjw.write(g, writer3);
+
+        
         System.out.println("Hallo Welt.");
     }
     
