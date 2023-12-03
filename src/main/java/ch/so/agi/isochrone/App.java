@@ -65,6 +65,7 @@ public class App {
             double lat = queryGraph.getNodeAccess().getLat(label.node);
             double lon = queryGraph.getNodeAccess().getLon(label.node);
             
+            
             double[] xy = ApproxSwissProj.WGS84toLV95(lat, lon, 450);
             
 //            Point p = new GeometryFactory().createPoint(new Coordinate(lat, lon));
@@ -105,10 +106,10 @@ public class App {
         gjw.write(g, writer2);
         
         
-        Geometry convexHull = mp.convexHull();
-        convexHull.setSRID(2056);
-        BufferedWriter writer3 = new BufferedWriter(new FileWriter("/Users/stefan/Downloads/erreichbarkeit_convex.json"));
-        gjw.write(convexHull, writer3);
+//        Geometry convexHull = mp.convexHull();
+//        convexHull.setSRID(2056);
+//        BufferedWriter writer3 = new BufferedWriter(new FileWriter("/Users/stefan/Downloads/erreichbarkeit_convex.json"));
+//        gjw.write(convexHull, writer3);
 
         
         System.out.println("Hallo Welt.");
