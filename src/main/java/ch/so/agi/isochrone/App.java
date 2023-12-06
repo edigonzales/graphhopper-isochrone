@@ -49,8 +49,8 @@ public class App {
         QueryGraph queryGraph = QueryGraph.create(hopper.getBaseGraph(), snap);
 
         ShortestPathTree tree = new ShortestPathTree(queryGraph, weighting, false, TraversalMode.NODE_BASED);
-        // find all nodes that are within a radius of 120s
-        tree.setTimeLimit(10 * 60 * 1000);
+        // find all nodes that are within a radius of XXXs
+        tree.setTimeLimit(10 * 60 * 1000); // milliseconds
 
 //        MultiPoint mp = new GeometryFactory().createMultiPoint();
         
