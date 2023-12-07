@@ -100,6 +100,7 @@ public class App {
              System.out.println("Building contour z={}: " + z);
              MultiPolygon isochrone = contourBuilder.computeIsoline(z, result.seedEdges);
              if (/*fullGeometry*/ true) {
+                 System.out.println("isochrone: " + isochrone);
                  isochrones.add(isochrone);
              } else {
 //                 Polygon maxPolygon;
@@ -111,6 +112,7 @@ public class App {
 //                }
 //                 isochrones.add(isochrone.getFactory().createPolygon(((LinearRing) maxPolygon.getExteriorRing())));
 //             }
+             }
          }
 
         
